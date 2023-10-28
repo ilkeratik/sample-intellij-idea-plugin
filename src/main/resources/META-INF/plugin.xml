@@ -43,6 +43,12 @@
                     icon="AllIcons.General.Balloon">
                 <add-to-group group-id="MainToolBar" anchor="first"/>
             </action>
+            <action id="com.iky.firstplugin.actions.WebsiteAction"
+                    class="com.iky.firstplugin.actions.WebsiteAction"
+                    text="Visit My Website"
+                    icon="AllIcons.General.Balloon">
+                <add-to-group group-id="MainToolBar" anchor="first"/>
+            </action>
         </group>
 
     </actions>
