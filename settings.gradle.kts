@@ -5,6 +5,4 @@ pluginManagement {
     }
 }
 
-include(":modulex")
-
 rootProject.name = "iky-first-plugin"
