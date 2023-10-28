@@ -24,6 +24,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <notificationGroup id="Button Click Notification Group"
                            displayType="BALLOON"/>
+        <toolWindow factoryClass="com.iky.firstplugin.toolwindows.TimeToolWindowFactory" id="TimeTW"/>
     </extensions>
 
     <actions>
@@ -40,13 +41,19 @@
             <action id="com.iky.firstplugin.actions.FormAction"
                     class="com.iky.firstplugin.actions.FormAction"
                     text="Open Form Dialog"
-                    icon="AllIcons.General.Balloon">
+                    icon="AllIcons.Actions.DependencyAnalyzer">
                 <add-to-group group-id="MainToolBar" anchor="first"/>
             </action>
             <action id="com.iky.firstplugin.actions.WebsiteAction"
                     class="com.iky.firstplugin.actions.WebsiteAction"
                     text="Visit My Website"
-                    icon="AllIcons.General.Balloon">
+                    icon="AllIcons.General.Web">
+                <add-to-group group-id="MainToolBar" anchor="first"/>
+            </action>
+            <action id="com.iky.firstplugin.actions.TimeToolWindow"
+                    class="com.iky.firstplugin.actions.TimeToolWindowAction"
+                    text="Time Tool Window"
+                    icon="AllIcons.Actions.Colors">
                 <add-to-group group-id="MainToolBar" anchor="first"/>
             </action>
         </group>
