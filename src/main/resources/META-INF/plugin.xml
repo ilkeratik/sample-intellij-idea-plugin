@@ -25,6 +25,7 @@
         <notificationGroup id="Button Click Notification Group"
                            displayType="BALLOON"/>
         <toolWindow factoryClass="com.iky.firstplugin.toolwindows.TimeToolWindowFactory" id="TimeTW"/>
+        <toolWindow factoryClass="com.iky.firstplugin.toolwindows.AssistantWindowFactory" id="AssistantTW"/>
     </extensions>
 
     <actions>
@@ -50,10 +51,16 @@
                     icon="AllIcons.General.Web">
                 <add-to-group group-id="MainToolBar" anchor="first"/>
             </action>
-            <action id="com.iky.firstplugin.actions.TimeToolWindow"
+            <action id="com.iky.firstplugin.actions.TimeToolWindowAction"
                     class="com.iky.firstplugin.actions.TimeToolWindowAction"
-                    text="Time Tool Window"
+                    text="Open Time Tool Window"
                     icon="AllIcons.Actions.Colors">
+                <add-to-group group-id="MainToolBar" anchor="first"/>
+            </action>
+            <action id="com.iky.firstplugin.actions.AssistantWindowAction"
+                    class="com.iky.firstplugin.actions.AssistantWindowAction"
+                    text="Open Assistant Tool Window"
+                    icon="AllIcons.Actions.Share">
                 <add-to-group group-id="MainToolBar" anchor="first"/>
             </action>
         </group>
