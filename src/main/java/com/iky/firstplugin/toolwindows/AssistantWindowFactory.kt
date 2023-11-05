@@ -11,17 +11,17 @@ import java.awt.BorderLayout
 import java.util.*
 import javax.swing.BorderFactory
 import javax.swing.JPanel
-import com.intellij.icons.AllIcons
 
 class AssistantWindowFactory() : ToolWindowFactory {
     private val contentPanel = JPanel()
-    private val jBrowser = JBCefBrowser("https://ilkeratik.com");
+    private val jBrowser = JBCefBrowser("https://ilkeratik.com/changeTheme?theme=light&redirectTo=blog&bgColor=3b3f42");
+    var colors = listOf("6272A4", "3B3F42", "FFB86C", "FF5555", "F8F8F2")
+    private var rand = Random()
     constructor(toolWindow: ToolWindow) : this() {
         contentPanel.layout = BorderLayout(2, 2)
         contentPanel.border = BorderFactory.createEmptyBorder(10,8,10,8)
         contentPanel.add(controlPanelUI(), BorderLayout.PAGE_START)
         contentPanel.add(websiteUI(), BorderLayout.CENTER)
-
     }
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
@@ -43,6 +43,12 @@ class AssistantWindowFactory() : ToolWindowFactory {
         return panel{
             row{
                 text("Hey! Welcome to IKY Assistant.").bold()
+            }
+            row{
+                button("Change background") {
+                    val color = colors[rand.nextInt(colors.size)]
+                    jBrowser.loadURL("https://ilkeratik.com/changeTheme?theme=light&redirectTo=blog&bgColor=$color")
+                }
             }
             collapsibleGroup("Setup") {
                 row("What result you want?") {
