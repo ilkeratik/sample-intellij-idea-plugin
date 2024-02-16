@@ -1,5 +1,5 @@
 # ExampleIntelliJPlugin
-A basic IntelliJ Plugin, including Action, Notification, ToolWindow, JBCefBrowser, GUI Form and Kotlin UI DSL examples
+A sample IntelliJ Plugin, including Action, Notification, ToolWindow, JBCefBrowser, GUI Form and Kotlin UI DSL examples
 
 ### Running the project
 
